@@ -24,3 +24,6 @@ def write_log_line(con, log_line):
 	if write_counter > 5000:
 		con.commit()
 		write_counter = 0
+
+def create_indexes(con):
+	con.execute("create index log_line_datetime_index on log_line (datetime)")

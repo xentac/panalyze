@@ -39,6 +39,8 @@ def _main(argv=None):
 			parser = panalyze.parser.StderrParser(log_filename, dbcon)
 			parser.parse_file()
 
+		panalyze.sqlite.create_indexes()
+
 		dbcon.commit()
 
 	elif options.logview:
