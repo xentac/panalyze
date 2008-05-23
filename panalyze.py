@@ -51,7 +51,7 @@ def _main(argv=None):
 
 		dbcon = panalyze.sqlite.connect(options.db_filename)
 
-		curses.wrapper(panalyze.pcurses.main_curses)
+		curses.wrapper(panalyze.pcurses.main_curses, dbcon)
 
 	return 0
 
